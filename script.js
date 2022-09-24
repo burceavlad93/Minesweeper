@@ -65,6 +65,7 @@ for (let i = 0; i < gameUnits.length; ++i) {                                    
         if (i < 89 && mixedArray[i + 10] == 'bomb') mixedArray[i]++;                        // If the index is smaller than 89 and it's the unit above it has a bomb we increment that element from the array
     }
 }
+//------------------------------------------------------------------GAME FUNCTIONS------------------------------------------------------------------------------------------------------------------
 
 function click(index) {                                                                     // Creating the click function
 
