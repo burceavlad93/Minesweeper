@@ -19,13 +19,6 @@ for (let i = 0; i < 100; ++i) {                                                 
 
 const gameUnits = document.querySelectorAll('.box');                                        // Select all div units
 mixedArray.sort(() => Math.random() - 0.5);                                                 // Shuffle the order of the elements within the third array
-
-for (let i = 0; i < 100; ++i) {
-    if (mixedArray[i] == 'bomb') {
-        gameUnits[i].style.backgroundColor = 'blue';
-    }
-}
-
 //------------------------------------------------------------------CHECKING GAME MAP-------------------------------------------------------------------------------------------------------------------------------------
 for (let i = 0; i < gameUnits.length; ++i) {                                                // Loop over all 100 divs
 
