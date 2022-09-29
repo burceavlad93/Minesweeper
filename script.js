@@ -19,6 +19,7 @@ for (let i = 0; i < 100; ++i) {                                                 
 
 const gameUnits = document.querySelectorAll('.box');                                        // Select all div units
 mixedArray.sort(() => Math.random() - 0.5);                                                 // Shuffle the order of the elements within the third array
+
 //------------------------------------------------------------------CHECKING GAME MAP-------------------------------------------------------------------------------------------------------------------------------------
 for (let i = 0; i < gameUnits.length; ++i) {                                                // Loop over all 100 divs
 
@@ -26,7 +27,9 @@ for (let i = 0; i < gameUnits.length; ++i) {                                    
         click(i);                                                                           // Within that event listener, we call a function with a parameter within the function
     })
 
-    gameUnits[i].oncontextmenu = function () {                                              // Similar to the event listener we add the 'oncontextmenu' so we can use the right mouse button
+    gameUnits[i].oncontextmenu = function (e) {                                              // Similar to the event listener we add the 'oncontextmenu' so we can use the right mouse button
+
+        e.preventDefault();
 
         if (!gameUnits[i].classList.contains('flagged')) {                                  // If the the div we are checking does NOT contain the class of 'flagged'
             gameUnits[i].textContent = '🚩';                                                // We add the flag icon to the game board
@@ -58,7 +61,6 @@ for (let i = 0; i < gameUnits.length; ++i) {                                    
         if (i < 89 && mixedArray[i + 10] == 'bomb') mixedArray[i]++;                        // If the index is smaller than 89 and it's the unit above it has a bomb we increment that element from the array
     }
 }
-//------------------------------------------------------------------GAME FUNCTIONS------------------------------------------------------------------------------------------------------------------
 
 function click(index) {                                                                     // Creating the click function
 
