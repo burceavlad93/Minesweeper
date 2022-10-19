@@ -40,7 +40,6 @@ function gameBoard() {                                                          
                 gameGrid[row][col].addEventListener('click', function () {                                      // AddEventListener to each element created 
                     clickedUnit(row, col);                                                                      // Calling clieckedUnit() function
                 })
-
                 gameGrid[row][col].oncontextmenu = function (rightClick) {                                      // Add right click function
                     rightClick.preventDefault();                                                                // Prevent rightclick browser menu
                     if (gameOn) {
