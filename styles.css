@@ -8,7 +8,7 @@ body {
 }
 
 
-#main {
+#map {
     margin-top: 20px;
     height: 500px;
     width: 500px;
@@ -47,6 +47,6 @@ body {
     text-decoration: none;
     font-size: 16px;
     display: block;
-    margin-left: 150px;
+    margin-left: 90px;
     margin-top: 20px;
 }
